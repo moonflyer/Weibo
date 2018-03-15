@@ -1,17 +1,17 @@
 # -*-coding: utf-8 -*-
 __author__= 'moonflyer'
+import re
 import time
 import random
+import scrapy
 import sys, os
+import fileinput
+from scrapy.http import Request
+from weibo.items import WeiboItem
+from scrapy.spider import Spider
+from scrapy.selector import Selector
 reload(sys)
 sys.setdefaultencoding("utf-8")
-from scrapy.spider import Spider
-from scrapy.http import Request
-from scrapy.selector import Selector
-from weibo.items import WeiboItem
-import fileinput
-import scrapy
-import re
 base ="download/" #存放文件分类的目录
 class weiboSpider(Spider):
     name= "weibo"
